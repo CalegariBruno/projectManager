@@ -1,3 +1,5 @@
+package viewer;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -28,28 +30,17 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
         pnPrincipal = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         pnAfazer = new javax.swing.JPanel();
-        lbAdd = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         pnTarefasAfazer = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        lbData = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        pnEmAndamento = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jScrollBar1 = new javax.swing.JScrollBar();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        pnEmAndamento = new javax.swing.JPanel();
         pnConcluido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerenciador de tarefas");
-
-        lbAdd.setText("Descrição da atividade:");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
 
         pnTarefasAfazer.setBorder(javax.swing.BorderFactory.createTitledBorder("Tarefas a fazer"));
 
@@ -76,17 +67,15 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
             pnTarefasAfazerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnTarefasAfazerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        lbData.setText("Data de início:");
+        jButton1.setText("Editar Tarefa");
 
-        try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
+        jButton3.setText("Nova Tarefa");
+
+        jButton4.setText("Excluir Tarefa");
 
         javax.swing.GroupLayout pnAfazerLayout = new javax.swing.GroupLayout(pnAfazer);
         pnAfazer.setLayout(pnAfazerLayout);
@@ -95,69 +84,39 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
             .addGroup(pnAfazerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnAfazerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnTarefasAfazer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnTarefasAfazer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnAfazerLayout.createSequentialGroup()
-                        .addComponent(lbAdd)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pnAfazerLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbData)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFormattedTextField1)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         pnAfazerLayout.setVerticalGroup(
             pnAfazerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnAfazerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbAdd)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnAfazerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnAfazerLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(pnTarefasAfazer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(pnAfazerLayout.createSequentialGroup()
-                        .addGroup(pnAfazerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbData)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(pnTarefasAfazer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnAfazerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("A fazer", pnAfazer);
-
-        jButton1.setText("jButton1");
-
-        jRadioButton1.setText("jRadioButton1");
 
         javax.swing.GroupLayout pnEmAndamentoLayout = new javax.swing.GroupLayout(pnEmAndamento);
         pnEmAndamento.setLayout(pnEmAndamentoLayout);
         pnEmAndamentoLayout.setHorizontalGroup(
             pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnEmAndamentoLayout.createSequentialGroup()
-                .addGroup(pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnEmAndamentoLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jButton1)))
-                    .addGroup(pnEmAndamentoLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(323, Short.MAX_VALUE))
+            .addGap(0, 471, Short.MAX_VALUE)
         );
         pnEmAndamentoLayout.setVerticalGroup(
             pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnEmAndamentoLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jButton1)
-                .addGap(42, 42, 42)
-                .addComponent(jRadioButton1)
-                .addGap(27, 27, 27)
-                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
+            .addGap(0, 303, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Em andamento", pnEmAndamento);
@@ -170,7 +129,7 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
         );
         pnConcluidoLayout.setVerticalGroup(
             pnConcluidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGap(0, 303, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Concluído", pnConcluido);
@@ -234,16 +193,11 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JScrollBar jScrollBar1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JLabel lbAdd;
-    private javax.swing.JLabel lbData;
     private javax.swing.JPanel pnAfazer;
     private javax.swing.JPanel pnConcluido;
     private javax.swing.JPanel pnEmAndamento;
