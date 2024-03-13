@@ -37,6 +37,9 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
         lbData = new javax.swing.JLabel();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         pnEmAndamento = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jScrollBar1 = new javax.swing.JScrollBar();
         pnConcluido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -125,15 +128,36 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("A fazer", pnAfazer);
 
+        jButton1.setText("jButton1");
+
+        jRadioButton1.setText("jRadioButton1");
+
         javax.swing.GroupLayout pnEmAndamentoLayout = new javax.swing.GroupLayout(pnEmAndamento);
         pnEmAndamento.setLayout(pnEmAndamentoLayout);
         pnEmAndamentoLayout.setHorizontalGroup(
             pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
+            .addGroup(pnEmAndamentoLayout.createSequentialGroup()
+                .addGroup(pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnEmAndamentoLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jButton1)))
+                    .addGroup(pnEmAndamentoLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         pnEmAndamentoLayout.setVerticalGroup(
             pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGroup(pnEmAndamentoLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jButton1)
+                .addGap(42, 42, 42)
+                .addComponent(jRadioButton1)
+                .addGap(27, 27, 27)
+                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Em andamento", pnEmAndamento);
@@ -209,7 +233,10 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
