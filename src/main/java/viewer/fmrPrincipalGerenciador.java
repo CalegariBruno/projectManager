@@ -73,8 +73,10 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
         );
 
         jButton1.setText("Editar Tarefa");
+        jButton1.setEnabled(false);
 
         jButton4.setText("Excluir Tarefa");
+        jButton4.setEnabled(false);
 
         javax.swing.GroupLayout pnAfazerLayout = new javax.swing.GroupLayout(pnAfazer);
         pnAfazer.setLayout(pnAfazerLayout);
@@ -103,6 +105,7 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
         jTabbedPane1.addTab("A fazer", pnAfazer);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tarefas em andamento"));
+        jPanel2.setPreferredSize(new java.awt.Dimension(463, 233));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -124,37 +127,39 @@ public class fmrPrincipalGerenciador extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton2.setText("Editar Tarefa");
+        jButton2.setEnabled(false);
 
         jButton3.setText("Excluir Tarefa");
+        jButton3.setEnabled(false);
         jButton3.setPreferredSize(new java.awt.Dimension(82, 24));
 
         javax.swing.GroupLayout pnEmAndamentoLayout = new javax.swing.GroupLayout(pnEmAndamento);
         pnEmAndamento.setLayout(pnEmAndamentoLayout);
         pnEmAndamentoLayout.setHorizontalGroup(
             pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
             .addGroup(pnEmAndamentoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(89, 89, 89)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(84, 84, 84)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnEmAndamentoLayout.setVerticalGroup(
             pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnEmAndamentoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(pnEmAndamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(12, 12, 12))
         );
 
         jTabbedPane1.addTab("Em andamento", pnEmAndamento);
